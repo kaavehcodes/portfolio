@@ -35,8 +35,8 @@ const LogoType = () => {
 
             const angleDeg = calculateAngle(mouseX, mouseY, anchorX, anchorY);
 
-            leftEye.setAttribute('transform', `rotate(${90 + angleDeg}, 203, 92)`);
-            rightEye.setAttribute('transform', `rotate(${90 + angleDeg}, 473, 92)`);
+            leftEye.setAttribute('transform', `rotate(${angleDeg}, 203, 92)`);
+            rightEye.setAttribute('transform', `rotate(${angleDeg}, 473, 92)`);
         };
 
         document.addEventListener('mousemove', handleMouseMove);
