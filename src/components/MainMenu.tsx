@@ -36,22 +36,22 @@ const MainMenu = () => {
                 </ul>
                 <ul className="flex flex-row items-center">
                     <li className="mr-2">
-                        <a href="https://x.com/KaavehTweets" target="_blank" no-referrer>
+                        <a href="https://x.com/KaavehTweets" className="cursor-pointer" target="_blank" no-referrer>
                             <IconTwitter width={32} height={32} />
                         </a>
                     </li>
                     <li className="mr-2">
-                        <a href="https://dribbble.com/kaavehdesigns" target="_blank" no-referrer>
+                        <a href="https://dribbble.com/kaavehdesigns" className="cursor-pointer" target="_blank" no-referrer>
                             <IconDribbble width={32} height={32} />
                         </a>
                     </li>
                     <li className="mr-2">
-                        <a href="https://github.com/kaavehcodes" target="_blank" no-referrer>
+                        <a href="https://github.com/kaavehcodes" className="cursor-pointer" target="_blank" no-referrer>
                             <IconGithub width={32} height={32} />
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/kaavehrostami/" target="_blank" no-referrer>
+                        <a href="https://www.linkedin.com/in/kaavehrostami/" className="cursor-pointer" target="_blank" no-referrer>
                             <IconLinkedin width={32} height={32} />
                         </a>
                     </li>

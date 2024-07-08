@@ -1,3 +1,5 @@
+"use client";
+
 const Navbar = () => {
     return (
         <nav className="flex flex-row justify-between px-0 py-2">
