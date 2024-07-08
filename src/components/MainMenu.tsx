@@ -1,33 +1,51 @@
+"use client";
+
+import styles from "./animation.module.css"
+
+import Link from "next/link"
+import IconDribbble from "./icons/IconDribbble"
+import IconGithub from "./icons/IconGithub"
+import IconLinkedin from "./icons/IconLinkedin"
+import IconTwitter from "./icons/IconTwitter"
+
 const MainMenu = () => {
     return (
-        <div className="p-4">
-            <div>
-                <ul className="flex flex-row items-center justify-between">
-                    <li className="text-3xl px-8">
-                        WORKS
+        <div className="px-0 py-4">
+            <div className="flex flex-row items-center justify-between">
+                <ul className="flex flex-row items-center">
+                    <li className="relative w-36">
+                        <Link href="/works" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold cursor-pointer transition-all duration-75">
+                            WORKS
+                        </Link>
                     </li>
-                    <li className="text-3xl px-8">
-                        ABOUT
+                    <li className="relative w-36">
+                        <a href="" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold cursor-pointer transition-all duration-75">
+                            ABOUT
+                        </a>
                     </li>
-                    <li className="text-3xl px-8">
-                        CONTACT
+                    <li className="relative w-48">
+                        <a href="" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold cursor-pointer transition-all duration-75">
+                            CONTACT
+                        </a>
                     </li>
-                    <li className="text-3xl px-8">
-                        BLOG
+                    <li className="relative w-28">
+                        <Link href="/blog" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold cursor-pointer transition-all duration-75">
+                            BLOG
+                        </Link>
                     </li>
                 </ul>
-                <ul>
-                    <li>
-                        Twitter
+                <ul className="flex flex-row items-center">
+                    <li className="mr-2">
+                        <IconTwitter width={32} height={32} />
+                    </li>
+                    <li className="mr-2">
+                        <IconDribbble width={32} height={32} />
+                    </li>
+                    <li className="mr-2">
+                        <IconGithub width={32} height={32} />
                     </li>
                     <li>
-                        dribbble
-                    </li>
-                    <li>
-                        Github
-                    </li>
-                    <li>
-                        Linkedin
+                        <IconLinkedin width={32} height={32} />
                     </li>
                 </ul>
             </div>

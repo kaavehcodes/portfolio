@@ -9,7 +9,9 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center justify-center">
       <section>
         <Navbar />
-        <LogoType />
+        <div className="mb-4">
+          <LogoType />
+        </div>
         <MainMenu />
       </section>
     </main>

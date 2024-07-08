@@ -1,6 +1,9 @@
 /* Animatiom */
-/* Blink*/
 
+/* Hover */
+.menuItem {}
+
+/* Blink*/
 .eyelidLeft,
 .eyelidRight {
     animation: blink 8s forwards infinite;
