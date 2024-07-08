@@ -10,7 +10,7 @@ import IconTwitter from "./icons/IconTwitter"
 
 const MainMenu = () => {
     return (
-        <div className="px-0 py-4">
+        <div className="w-full px-0 py-4">
             <div className="flex flex-row items-center justify-between">
                 <ul className="flex flex-row items-center">
                     <li className="relative w-36">
