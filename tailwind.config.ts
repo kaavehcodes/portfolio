@@ -20,6 +20,10 @@ const config: Config = {
         github: "#1F2328",
         linkedin: "#2867B2"
       },
+      spacing: {
+        '128': '32rem',
+        '160': '40rem',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
