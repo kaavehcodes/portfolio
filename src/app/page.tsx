@@ -9,6 +9,7 @@ import SkillTag from "@/components/SkillTag";
 import Image from "next/image";
 import Link from "next/link";
 import FormContact from "@/components/FormContact";
+import BlogPost from "@/components/BlogPost";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
           <MainMenu />
         </div>
       </section>
-      <section className="min-h-screen">
+      <section className="min-h-screen mb-32">
         <div className="flex flex-row items-center justify-center m-8">
           <h2 className="text-8xl font-light uppercase">WORKS</h2>
         </div>
@@ -34,7 +35,7 @@ export default function Home() {
           <Link href="/works">VIEW ALL</Link>
         </div>
       </section>
-      <section className="min-h-screen">
+      <section className="min-h-screen mb-32">
         <div className="flex flex-row items-center justify-center m-8">
           <h2 className="text-8xl font-light uppercase">ABOUT</h2>
         </div>
@@ -101,7 +102,7 @@ export default function Home() {
           <h2 className="text-8xl font-light uppercase">BLOG</h2>
         </div>
         <div>
-
+          <BlogPost />
         </div>
       </section>
     </main>
