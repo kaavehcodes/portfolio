@@ -13,7 +13,7 @@ export const SKILLS = [
     { id: "skl-012", title: "Figma", type: "design", image: "icon-figma.svg" },
     { id: "skl-013", title: "Photoshop", type: "design", image: "icon-photoshop.svg" },
     { id: "skl-014", title: "Illustrator", type: "design", image: "icon-illustrator.svg" },
-    { id: "skl-015", title: "Rive", type: "design", image: "icon-rive.png" },
+    { id: "skl-015", title: "Rive", type: "design", image: "icon-rive.jpeg" },
     { id: "skl-016", title: "Blender", type: "design", image: "icon-blender.svg" },
     { id: "skl-017", title: "3ds Max", type: "design", image: "icon-3dsmax.png" },
     { id: "skl-018", title: "HTML", type: "develop", image: "icon-html.svg" },

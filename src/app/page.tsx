@@ -8,6 +8,7 @@ import Tableau from "@/components/Tableau";
 import SkillTag from "@/components/SkillTag";
 import Image from "next/image";
 import Link from "next/link";
+import FormContact from "@/components/FormContact";
 
 export default function Home() {
   return (
@@ -87,11 +88,12 @@ export default function Home() {
         </div>
       </section>
       <section className="min-h-screen">
-        <div className="flex flex-row items-center justify-center m-8">
+        <div className="flex flex-row items-center justify-center mb-16">
           <h2 className="text-8xl font-light uppercase">CONTACT</h2>
         </div>
-        <div>
-
+        <div className="flex flex-col items-center">
+          <p className="text-4xl font-thin mb-8">Send me a message</p>
+          <FormContact />
         </div>
       </section>
       <section className="min-h-screen">
