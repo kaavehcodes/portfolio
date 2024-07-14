@@ -110,7 +110,7 @@ export default function Home() {
           </div>
           <div className="w-max">
             <div className="">
-              <BlogPost />
+
             </div>
           </div>
         </section>

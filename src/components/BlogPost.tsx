@@ -1,17 +1,23 @@
 "use client"
 
 import Link from "next/link"
+import { formatDate } from "@/lib/utils";
 
-const BlogPost = (post: any) => {
-    console.log(post)
+interface BlogPostProps {
+    slug: string;
+    title: string;
+    description?: string;
+    date: string;
+}
 
+const BlogPost = ({ slug, title, description, date }: BlogPostProps) => {
     return (
-        <Link href={`/blog/${post.slug}`}>
-            <div className="border-b">
-                <h3>{post.title}</h3>
-                <p>{post.subtitle}</p>
-                <p>{post.published}</p>
-            </div>
+        <Link href={"/" + slug}>
+            <article className="border-b">
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <time dateTime={date}>{formatDate(date)}</time>
+            </article>
         </Link>
     )
 }
