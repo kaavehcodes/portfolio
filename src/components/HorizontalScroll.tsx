@@ -19,7 +19,7 @@ const HorizontalScroll = ({
 
     return (
         <section ref={targetRef} className="relative h-[800vh]">
-            <motion.div style={{ x: scrollX }} className="sticky top-0 flex flex-row items-center">
+            <motion.div style={{ x: scrollX }} className="sticky top-0 min-h-screen flex flex-row items-center">
                 {children}
             </motion.div>
         </section>

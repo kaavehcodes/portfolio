@@ -21,31 +21,33 @@ import HorizontalScroll from "@/components/HorizontalScroll";
 export default function Home() {
   return (
     <main className="relative">
+
       <HorizontalScroll>
-        <section className="relative">
-          <div className="">
-            <Navbar />
-            <LogoType />
-            <MainMenu />
+
+        <section className="flex justify-center">
+          <div className="min-h-screen w-screen flex flex-col items-center justify-center">
+            <div className="">
+              <Navbar />
+              <LogoType />
+              <MainMenu />
+            </div>
           </div>
         </section>
 
-        <section className="relative">
-          <div className="">
-            <div className="absolute top-0 left-0 origin-top-left rotate-90 m-8">
-              <h2 className="text-8xl font-light uppercase">WORKS</h2>
-            </div>
-            <div className="w-max grid grid-cols-1 md:grid-cols-3">
-              <Tableau title="Wear Vintage" description="Online shop for vintage fashion" />
-              <Tableau title="Wear Vintage" description="Online shop for vintage fashion" />
-              <Tableau title="Wear Vintage" description="Online shop for vintage fashion" />
-            </div>
+        <section className="flex items-start">
+          <div className="py-8">
+            <h2 className="text-16xl font-light uppercase text-timberwolf origin-bottom rotate-90">WORKS</h2>
+          </div>
+          <div className="w-max grid grid-cols-1 md:grid-cols-3">
+            <Tableau title="Wear Vintage" description="Online shop for vintage fashion" />
+            <Tableau title="Wear Vintage" description="Online shop for vintage fashion" />
+            <Tableau title="Wear Vintage" description="Online shop for vintage fashion" />
           </div>
         </section>
 
         <section className="relative">
           <div className="w-max">
-            <div className="absolute top-0 left-0 origin-top-left rotate-90 m-8">
+            <div className="absolute top-0 left-0 origin-bottom-left rotate-90 m-8">
               <h2 className="text-8xl font-light uppercase">ABOUT</h2>
             </div>
             {/* <div className="flex flex-col items-center"> */}
@@ -149,6 +151,7 @@ export default function Home() {
           </ul>
           <p>Copyright</p>
         </footer>
+
       </HorizontalScroll>
 
     </main>

@@ -20,6 +20,9 @@ const config: Config = {
         github: "#1F2328",
         linkedin: "#2867B2"
       },
+      fontSize: {
+        "16xl": "12rem"
+      },
       spacing: {
         '128': '32rem',
         '160': '40rem',
