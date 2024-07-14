@@ -26,7 +26,7 @@ export default function Home() {
 
         <section className="flex justify-center">
           <div className="min-h-screen w-screen flex flex-col items-center justify-center">
-            <div className="">
+            <div className="bg-red-500">
               <Navbar />
               <LogoType />
               <MainMenu />
@@ -34,9 +34,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex items-start">
+        <section className="flex items-center">
           <div className="py-8">
-            <h2 className="text-16xl font-light uppercase text-timberwolf origin-bottom rotate-90">WORKS</h2>
+            <h2 className="text-16xl font-light uppercase text-timberwolf origin-center rotate-90">WORKS</h2>
           </div>
           <div className="w-max grid grid-cols-1 md:grid-cols-3">
             <Tableau title="Wear Vintage" description="Online shop for vintage fashion" />
@@ -45,32 +45,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative">
-          <div className="w-max">
-            <div className="absolute top-0 left-0 origin-bottom-left rotate-90 m-8">
-              <h2 className="text-8xl font-light uppercase">ABOUT</h2>
-            </div>
-            {/* <div className="flex flex-col items-center"> */}
-            <div className="w-max px-4 mb-16">
-              <p className="text-3xl font-light mb-8">Hey,</p>
-              <p className="text-xl font-light mb-4">
-                I am Kaaveh, a product designer who also knows how to make video games.
-              </p>
-              <p className="text-xl font-light mb-4">
-                I believe, the future of the web is three-dimensional and AI-powered.
-                I prepare for this shift by researching trends, exploring new ideas,
-                and experimenting with different interactions.
-              </p>
-              <p className="text-xl font-light">
-                My focus is on creating products that use game mechanics, artificial intelligence,
-                and augmented reality to make learning tailored, effective, and fun.
-              </p>
-            </div>
+        <section className="flex items-center px-32">
+          <div className="py-8">
+            <h2 className="text-16xl font-light uppercase text-timberwolf origin-center rotate-90">ABOUT</h2>
           </div>
-        </section>
-
-        <section className="relative">
-          <div className="w-1/2 flex flex-col px-4">
+          <div className="w-max mr-16">
+            <p className="text-4xl font-light mb-8">Hey,</p>
+            <p className="text-xl font-light mb-4">
+              I am Kaaveh, a product designer who also knows how to make video games.
+            </p>
+            <p className="text-xl font-light">
+              My focus is on creating products that use game mechanics, artificial intelligence,
+            </p>
+            <p className="text-xl font-light">
+              and augmented reality to make learning tailored, effective, and fun.
+            </p>
+          </div>
+          <div className="flex flex-col px-16">
             <div className="mb-8">
               <h3 className="text-3xl font-light mb-4">My Toolbox</h3>
               <div className="w-128 flex flex-wrap">
