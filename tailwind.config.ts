@@ -21,7 +21,8 @@ const config: Config = {
         linkedin: "#2867B2"
       },
       fontSize: {
-        "16xl": "12rem"
+        "10xl": "10rem",
+        "12xl": "12rem"
       },
       spacing: {
         '128': '32rem',

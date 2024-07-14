@@ -26,7 +26,7 @@ export default function Home() {
 
         <section className="flex justify-center">
           <div className="min-h-screen w-screen flex flex-col items-center justify-center">
-            <div className="bg-red-500">
+            <div>
               <Navbar />
               <LogoType />
               <MainMenu />
@@ -36,7 +36,7 @@ export default function Home() {
 
         <section className="flex items-center">
           <div className="py-8">
-            <h2 className="text-16xl font-light uppercase text-timberwolf origin-center rotate-90">WORKS</h2>
+            <h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">WORKS</h2>
           </div>
           <div className="w-max grid grid-cols-1 md:grid-cols-3">
             <Tableau title="Wear Vintage" description="Online shop for vintage fashion" />
@@ -47,9 +47,9 @@ export default function Home() {
 
         <section className="flex items-center px-32">
           <div className="py-8">
-            <h2 className="text-16xl font-light uppercase text-timberwolf origin-center rotate-90">ABOUT</h2>
+            <h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">ABOUT</h2>
           </div>
-          <div className="w-max mr-16">
+          <div className="w-max mr-32">
             <p className="text-4xl font-light mb-8">Hey,</p>
             <p className="text-xl font-light mb-4">
               I am Kaaveh, a product designer who also knows how to make video games.
@@ -94,28 +94,28 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative">
-          <div className="flex flex-row items-center justify-center mb-16">
-            <h2 className="text-8xl font-light uppercase">CONTACT</h2>
+        {/* <section className="flex items-center px-32">
+          <div className="py-8">
+            <h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">CONTACT</h2>
           </div>
           <div className="flex flex-col items-center">
             <p className="text-4xl font-thin mb-8">Send me a message</p>
             <FormContact />
           </div>
-        </section>
+        </section> */}
 
-        <section className="relative">
-          <div className="flex flex-row items-center justify-center m-8">
-            <h2 className="text-8xl font-light uppercase">BLOG</h2>
+        {/* <section className="flex items-center px-32">
+          <div className="py-8">
+            <h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">BLOG</h2>
           </div>
-          <div className="container w-1/2 mx-auto">
+          <div className="w-max">
             <div className="">
               <BlogPost />
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <footer>
+        {/* <footer>
           <figure>Glasses</figure>
           <p>Slogan</p>
           <ul className="flex flex-row items-center">
@@ -141,7 +141,7 @@ export default function Home() {
             </li>
           </ul>
           <p>Copyright</p>
-        </footer>
+        </footer> */}
 
       </HorizontalScroll>
 
