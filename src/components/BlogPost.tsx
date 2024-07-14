@@ -2,14 +2,17 @@
 
 import Link from "next/link"
 
-const BlogPost = () => {
+const BlogPost = (post: any) => {
+    console.log(post)
+
     return (
-        <div className="border-b">
-            <h3>Post title</h3>
-            <p>Post description</p>
-            <p>Nov 23, 2024</p>
-            <Link href="#">Go to post</Link>
-        </div>
+        <Link href={`/blog/${post.slug}`}>
+            <div className="border-b">
+                <h3>{post.title}</h3>
+                <p>{post.subtitle}</p>
+                <p>{post.published}</p>
+            </div>
+        </Link>
     )
 }
 

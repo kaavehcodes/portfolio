@@ -94,7 +94,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section className="flex items-center px-32">
+        <section className="flex items-center px-32">
           <div className="py-8">
             <h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">CONTACT</h2>
           </div>
@@ -102,9 +102,9 @@ export default function Home() {
             <p className="text-4xl font-thin mb-8">Send me a message</p>
             <FormContact />
           </div>
-        </section> */}
+        </section>
 
-        {/* <section className="flex items-center px-32">
+        <section className="flex items-center px-32">
           <div className="py-8">
             <h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">BLOG</h2>
           </div>
@@ -113,7 +113,7 @@ export default function Home() {
               <BlogPost />
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* <footer>
           <figure>Glasses</figure>

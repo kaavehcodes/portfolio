@@ -8,11 +8,11 @@ export default function Blog() {
         <main>
             <section>
                 <h1>Blog</h1>
-                {/* <div>
+                <div>
                     {postMetadata.map((post, postIndex) => (
-                        // <BlogPost key={postIndex} post={post} />
+                        <BlogPost key={postIndex} post={post} />
                     ))}
-                </div> */}
+                </div>
             </section>
         </main>
     )
