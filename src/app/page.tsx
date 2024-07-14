@@ -49,7 +49,7 @@ export default function Home() {
           <div className="py-8">
             <h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">ABOUT</h2>
           </div>
-          <div className="w-max mr-32">
+          <div className="w-max px-16 mr-32">
             <p className="text-4xl font-light mb-8">Hey,</p>
             <p className="text-xl font-light mb-4">
               I am Kaaveh, a product designer who also knows how to make video games.
