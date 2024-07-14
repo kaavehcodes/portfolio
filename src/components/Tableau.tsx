@@ -6,7 +6,7 @@ import IconArrowRight from "./icons/IconArrowRight";
 
 const Tableau = ({ title, description }: { title: string; description: string }) => {
     return (
-        <div className="m-8">
+        <div className="w-max m-8">
             <figure>
                 <Image src="/images/works_wv-tableau-preview.png" width={500} height={500} alt="" />
             </figure>

@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const BlogPost = () => {
     return (
-        <div>
+        <div className="border-b">
             <h3>Post title</h3>
             <p>Post description</p>
             <p>Nov 23, 2024</p>
