@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 import { posts } from "#site/content"
+import { MDXContent } from "@/components/mdx-components"
 
 interface PostPageProps {
 	params: {
@@ -28,6 +29,7 @@ export default async function Post({ params }: PostPageProps) {
 	return (
 		<article className="">
 			<h1>{post.title}</h1>
+			<MDXContent code={post.body} />
 		</article>
 	)
 }
