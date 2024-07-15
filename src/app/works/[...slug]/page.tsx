@@ -10,7 +10,7 @@ interface WorkPageProps {
 
 async function getPostFromParams(params: WorkPageProps["params"]) {
   const slug = params.slug.join("/")
-  const post = works.find((work) => work.slugAsParams === slug)
+  const work = works.find((work) => work.slugAsParams === slug)
 
   return work
 }
