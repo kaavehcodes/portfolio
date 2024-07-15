@@ -1,5 +1,5 @@
 export const siteLinks = {
-    name: "Kaaveh Rostami",
+    title: "Kaaveh Rostami | Product Designer",
     url: "https://kaaveh.vercel.app",
     description: "Product designer and game developer",
     author: "Kaaveh Rostami",

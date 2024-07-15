@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import { siteLinks } from "@/lib/data-links";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -8,8 +9,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Kaaveh Rostami | Product Designer",
-  description: "I'm Kaaveh, a product designer who also makes games.",
+  title: siteLinks.title,
+  description: siteLinks.description,
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? siteLinks.url)
 };
 
 export default function RootLayout({
