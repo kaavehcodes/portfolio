@@ -19,6 +19,7 @@ import IconGithub from "@/components/icons/IconGithub"
 import IconLinkedin from "@/components/icons/IconLinkedin"
 import IconTwitter from "@/components/icons/IconTwitter"
 import HorizontalScroll from "@/components/HorizontalScroll"
+import IconArrowRight from "@/components/icons/IconArrowRight"
 
 export default function Home() {
 	const sortedPosts = sortPosts(posts.filter((post) => post.published))
@@ -113,49 +114,29 @@ export default function Home() {
 					<div className="py-8">
 						<h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">BLOG</h2>
 					</div>
-					<div className="w-max">
-						{displayPosts?.length > 0 ? (
-							<ul className="flex flex-col">
-								{displayPosts.map((post) => {
-									const { slug, title, description, date } = post
-									return <li key={slug}>
-										<BlogPost slug={slug} title={title} description={description} date={date} />
-									</li>
-								})}
-							</ul>
-						) : (
-							<p>No blog posts yet</p>
-						)}
+					<div className="flex flex-col">
+						<div className="w-max">
+							{displayPosts?.length > 0 ? (
+								<ul className="flex flex-col">
+									{displayPosts.map((post) => {
+										const { slug, title, description, date } = post
+										return <li key={slug}>
+											<BlogPost slug={slug} title={title} description={description} date={date} />
+										</li>
+									})}
+								</ul>
+							) : (
+								<p>No blog posts yet</p>
+							)}
+						</div>
+						<div>
+							<Link href="/blog" className="flex flex-row">
+								<p className="text-xl font-light uppercase mr-2">Go to blog</p>
+								<IconArrowRight width={24} height={24} />
+							</Link>
+						</div>
 					</div>
 				</section>
-
-				{/* <footer>
-          <figure>Glasses</figure>
-          <p>Slogan</p>
-          <ul className="flex flex-row items-center">
-            <li className="mr-2">
-              <a href="https://x.com/KaavehTweets" className="cursor-pointer" target="_blank" no-referrer="true">
-                <IconTwitter width={32} height={32} />
-              </a>
-            </li>
-            <li className="mr-2">
-              <a href="https://dribbble.com/kaavehdesigns" className="cursor-pointer" target="_blank" no-referrer="true">
-                <IconDribbble width={32} height={32} />
-              </a>
-            </li>
-            <li className="mr-2">
-              <a href="https://github.com/kaavehcodes" className="cursor-pointer" target="_blank" no-referrer="true">
-                <IconGithub width={32} height={32} />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/kaavehrostami/" className="cursor-pointer" target="_blank" no-referrer="true">
-                <IconLinkedin width={32} height={32} />
-              </a>
-            </li>
-          </ul>
-          <p>Copyright</p>
-        </footer> */}
 
 			</HorizontalScroll>
 
