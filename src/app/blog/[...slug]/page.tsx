@@ -1,38 +1,33 @@
-import fs from "fs"
-import matter from "gray-matter"
-import Markdown from "markdown-to-jsx"
-import getMetadata from "@/lib/getMetadata"
+import { notFound } from "next/navigation"
+import { posts } from "#site/content"
 
-function getPostContent(slug: any) {
-    const folder = "blog/"
-    const file = folder + `${slug}.md`
-    const content = fs.readFileSync(file, "utf8")
-
-    const matterResult = matter(content)
-    return matterResult
+interface PostPageProps {
+	params: {
+		slug: Array<string>
+	}
 }
 
-export const generateStaticParams = async () => {
-    const posts = getMetadata("src/content/blog")
-    return posts.map((post) => ({ slug: post.slug }))
+async function getPostFromParams(params: PostPageProps["params"]) {
+	const slug = params.slug.join("/")
+	const post = posts.find((post) => post.slugAsParams === slug)
+
+	return post
 }
 
-export async function generateMetadata({ params, searchParams }: { params: any; searchParams: any }) {
-    const id = params.slug ? " . " + params.slug : ""
-    return {
-        title: `Article ${id.replaceAll("_", " ")}`
-    }
+export async function generateStaticParams(): Promise<Array<PostPageProps["params"]>> {
+	return posts.map(post => ({ slug: post.slugAsParams.split("/") }))
 }
 
-export default function Post(slug: any) {
-    const post = getPostContent(slug)
-    console.log(post)
+export default async function Post({ params }: PostPageProps) {
+	const post = await getPostFromParams(params)
 
-    return (
-        <main>
-            <article>
-                <Markdown>{post.content}</Markdown>
-            </article>
-        </main>
-    )
+	if (!post || !post.published) {
+		notFound()
+	}
+
+	return (
+		<article className="">
+			<h1>{post.title}</h1>
+		</article>
+	)
 }
