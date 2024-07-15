@@ -1,4 +1,4 @@
-import { SKILLS } from "@/content/data-skills";
+import { SKILLS } from "@/lib/data-skills";
 
 import Image from "next/image";
 import Link from "next/link";

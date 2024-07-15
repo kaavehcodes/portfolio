@@ -3,32 +3,30 @@ import { sortPosts } from "@/lib/utils"
 import BlogPost from "@/components/BlogPost"
 
 export default async function Blog() {
-    const sortedPosts = sortPosts(posts.filter((post) => post.published))
-    const displayPosts = sortedPosts
+	const sortedPosts = sortPosts(posts.filter((post) => post.published))
+	const displayPosts = sortedPosts
 
-    console.log(displayPosts)
-
-    return (
-        <main>
-            <section>
-                <div>
-                    <h1>Blog</h1>
-                </div>
-                <div>
-                    {displayPosts?.length > 0 ? (
-                        <ul className="flex flex-col">
-                            {displayPosts.map((post) => {
-                                const { slug, title, description, date } = post
-                                return <li key={slug}>
-                                    <BlogPost slug={slug} title={title} description={description} date={date} />
-                                </li>
-                            })}
-                        </ul>
-                    ) : (
-                        <p>No blog posts yet</p>
-                    )}
-                </div>
-            </section>
-        </main>
-    )
+	return (
+		<main>
+			<section>
+				<div>
+					<h1>Blog</h1>
+				</div>
+				<div>
+					{displayPosts?.length > 0 ? (
+						<ul className="flex flex-col">
+							{displayPosts.map((post) => {
+								const { slug, title, description, date } = post
+								return <li key={slug}>
+									<BlogPost slug={slug} title={title} description={description} date={date} />
+								</li>
+							})}
+						</ul>
+					) : (
+						<p>No blog posts yet</p>
+					)}
+				</div>
+			</section>
+		</main>
+	)
 }
