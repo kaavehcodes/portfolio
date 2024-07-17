@@ -3,8 +3,9 @@
 import { useSearchParams } from "next/navigation"
 import { useMemo } from "react"
 import type { Work } from "#site/content"
+import Tableau from "./Tableau"
 
-const Works = ({ works }: { works: Array<Work> }) => {
+const GridWorks = ({ works }: { works: Array<Work> }) => {
   const params = useSearchParams()
   const tag = params.get("tag")
 
@@ -22,7 +23,7 @@ const Works = ({ works }: { works: Array<Work> }) => {
           {filtered.map((work) => {
             const { slug, title, description, date } = work
             return <li key={slug}>
-
+              <Tableau title={title} />
             </li>
           })}
         </ul>
@@ -33,4 +34,4 @@ const Works = ({ works }: { works: Array<Work> }) => {
   )
 }
 
-export default Works
+export default GridWorks

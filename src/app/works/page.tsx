@@ -3,6 +3,7 @@ import { cn, sortPosts } from "@/lib/utils"
 import BlogPost from "@/components/BlogPost"
 import Header from "@/components/Header"
 import Filter from "@/components/Filter"
+import GridWorks from "@/components/Works"
 
 export default async function Works() {
   const sortedWorks = sortPosts(works.filter((work) => work.published))
@@ -20,20 +21,8 @@ export default async function Works() {
         </div>
       </section>
       <section className="container mx-auto">
-
         <div>
-          {displayWorks?.length > 0 ? (
-            <ul className="flex flex-col">
-              {displayWorks.map((work) => {
-                const { slug, title, description, date } = work
-                return <li key={slug}>
-                  <BlogPost slug={slug} title={title} description={description} date={date} />
-                </li>
-              })}
-            </ul>
-          ) : (
-            <p>No blog posts yet</p>
-          )}
+          <GridWorks works={displayWorks} />
         </div>
       </section>
     </main>

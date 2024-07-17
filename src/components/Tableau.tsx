@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import IconArrowRight from "./icons/IconArrowRight";
 
-const Tableau = ({ title, description }: { title: string; description: string }) => {
+const Tableau = ({ title, description }: { title: string; description?: string }) => {
     return (
         <div className="w-max m-8">
             <figure>
