@@ -14,22 +14,22 @@ const MainMenu = () => {
             <div className="flex flex-row items-center justify-between">
                 <ul className="flex flex-row items-center">
                     <li className="relative w-36">
-                        <Link href="/works" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold cursor-pointer transition-all duration-75">
+                        <Link href="/works" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold transition-all duration-75 cursor-pointer">
                             WORKS
                         </Link>
                     </li>
                     <li className="relative w-36">
-                        <a href="" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold cursor-pointer transition-all duration-75">
+                        <a href="" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold transition-all duration-75 cursor-pointer">
                             ABOUT
                         </a>
                     </li>
                     <li className="relative w-48">
-                        <a href="" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold cursor-pointer transition-all duration-75">
+                        <a href="" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold transition-all duration-75 cursor-pointer">
                             CONTACT
                         </a>
                     </li>
                     <li className="relative w-28">
-                        <Link href="/blog" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold cursor-pointer transition-all duration-75">
+                        <Link href="/blog" className="absolute top-0 left-0 -translate-y-1/2 text-3xl hover:text-4xl font-light hover:font-bold transition-all duration-75 cursor-pointer">
                             BLOG
                         </Link>
                     </li>
