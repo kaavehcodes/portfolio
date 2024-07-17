@@ -1,9 +1,12 @@
 "use clientefth"
 
 import Link from "next/link"
+
+import { cn } from "@/lib/utils"
 import Logo from "./Logo"
 
-const Header = () => {
+
+const Header = ({ page }: { page: string }) => {
   return (
     <header className="p-4">
       <nav className="flex flex-row items-center justify-between">
@@ -12,17 +15,25 @@ const Header = () => {
           {/* <p className="text-4xl font-light ml-4">Kaaveh <span className="text-4xl font-normal">Writes</span></p> */}
         </Link>
         <ul className="flex flex-row">
-          <li className="text-2xl font-light hover:font-normal px-4">
+          <li className={cn("text-2xl font-light hover:font-normal transition-all duration-75 cursor-pointer px-4", {
+            "font-bold": page === "works"
+          })}>
             <Link href="/works">WORKS</Link>
           </li>
-          <li className="text-2xl font-light hover:font-normal px-4">
+          <li className={cn("text-2xl font-light hover:font-normal transition-all duration-75 cursor-pointer px-4", {
+            "font-bold": page === "about"
+          })}>
             <Link href="/about">ABOUT</Link>
           </li>
-          <li className="text-2xl font-light hover:font-normal px-4">
+          <li className={cn("text-2xl font-light hover:font-normal transition-all duration-75 cursor-pointer px-4", {
+            "font-bold": page === "contact"
+          })}>
             <Link href="/contact">CONTACT</Link>
           </li>
-          <li className="text-2xl font-bold px-4">
-            BLOG
+          <li className={cn("text-2xl font-light hover:font-normal transition-all duration-75 cursor-pointer px-4", {
+            "font-bold": page === "blog"
+          })}>
+            <Link href="/blog">BLOG</Link>
           </li>
         </ul>
       </nav>

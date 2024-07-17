@@ -17,7 +17,7 @@ export default async function Blog() {
 
 	return (
 		<main>
-			<Header />
+			<Header page="blog" />
 			<section className="p-4">
 				<div className="w-full grid grid-cols-3 gap-8">
 					<div className="col-span-2">
