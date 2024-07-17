@@ -7,7 +7,7 @@ import BlogPost from "@/components/BlogPost"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-	title: "Blog",
+	title: "Kaaveh Writes",
 	description: "Design, code, and games."
 }
 
