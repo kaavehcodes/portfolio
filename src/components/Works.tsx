@@ -6,30 +6,26 @@ import type { Work } from "#site/content"
 import Tableau from "./Tableau"
 
 const GridWorks = ({ works }: { works: Array<Work> }) => {
-  const params = useSearchParams()
-  const tag = params.get("tag")
+  const params = useSearchParams()!
+  const category = params.get("category")
 
-  const filtered = useMemo(() => {
-    if (tag && works) {
-      return works.filter((work) => work.category.some((t) => t.tag === tag))
-    }
-    return works
-  }, [works, tag])
+  // const filtered = useMemo(() => {
+  //   if (active && works) {
+  //     return works.filter((work) => work.category.some((t) => t. t.tag === tag))
+  //   }
+  //   return works
+  // }, [works, tag])
 
   return (
     <div>
-      {filtered.length > 0 ? (
-        <ul className="flex flex-col">
-          {filtered.map((work) => {
-            const { slug, title, description, date } = work
-            return <li key={slug}>
-              <Tableau title={title} />
-            </li>
-          })}
-        </ul>
-      ) : (
-        <p>No blog posts yet</p>
-      )}
+      <ul className="flex flex-col">
+        {filtered.map((work) => {
+          const { slug, title, description, date } = work
+          return <li key={slug}>
+            <Tableau title={title} />
+          </li>
+        })}
+      </ul>
     </div>
   )
 }

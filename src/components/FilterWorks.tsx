@@ -1,18 +1,33 @@
 "use client"
 
 import { useRouter } from "next/navigation"
+import { useSearchParams } from "next/navigation"
+import { useCallback, useMemo } from "react"
+import { Work } from "#site/content"
 
-const Filter = () => {
+const FilterWorks = () => {
   const router = useRouter()
+  const searchParams = useSearchParams()!
+  const category = searchParams.get("category")
 
-  const setFilter = (tag: string) => {
-    if (tag) {
-      router.push("?tag=" + tag)
+  const setFilter = (category: string) => {
+    // let catId = parseInt(id ?? "0") + 1
+    // router.push(`/?${createQueryString("category", catId.toString())}`)
+
+    if (category) {
+      router.push("?category=" + category)
     }
-    if (!tag) {
+    if (!category) {
       router.push("/")
     }
   }
+
+  // const filteredWorks = useMemo(() => {
+  //   if (category && works) {
+  //     return works.filter((work) => work.category === category)
+  //   }
+  //   return works
+  // }, [category, works])
 
   return (
     <ul className="flex flex-row items-center">
@@ -32,4 +47,4 @@ const Filter = () => {
   )
 }
 
-export default Filter
+export default FilterWorks

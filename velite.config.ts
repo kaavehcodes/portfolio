@@ -16,6 +16,8 @@ const posts = defineCollection({
 		title: s.string().max(99),
 		description: s.string().max(999).optional(),
 		date: s.isodate(),
+		category: s.string(),
+		tags: s.array(s.string()).optional(),
 		published: s.boolean().default(true),
 		body: s.mdx()
 	}).transform(computedFields)
@@ -29,7 +31,8 @@ const works = defineCollection({
 		title: s.string().max(99),
 		description: s.string().max(999).optional(),
 		date: s.isodate(),
-		category: s.string().array(),
+		category: s.string(),
+		tags: s.array(s.string()).optional(),
 		published: s.boolean().default(true),
 		body: s.mdx()
 	}).transform(computedFields)
