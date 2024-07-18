@@ -59,9 +59,9 @@ const FilterItems = ({ items }: { items: Array<Work> }) => {
       </ul>
       <ul className="grid grid-cols-2 gap-8">
         {filtered.map((work) => {
-          const { slug, title, description, date } = work
+          const { slug, title } = work
           return <li key={slug}>
-            <Tableau title={title} />
+            <Tableau title={title} slug={slug} />
           </li>
         })}
       </ul>

@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import { posts } from "#site/content"
+import { works, posts } from "#site/content"
 import { sortItems } from "@/lib/utils"
 import { SKILLS } from "@/lib/data-skills"
 
@@ -23,7 +23,10 @@ import IconArrowRight from "@/components/icons/IconArrowRight"
 
 export default function Home() {
 	const sortedPosts = sortItems(posts.filter((post) => post.published))
+	const sortedWorks = sortItems(works.filter((work) => work.published))
+
 	const displayPosts = sortedPosts
+	const displayWorks = sortedWorks
 
 	return (
 		<main className="relative">
@@ -44,10 +47,11 @@ export default function Home() {
 					<div className="py-8">
 						<h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">WORKS</h2>
 					</div>
-					<div className="w-max grid grid-cols-1 md:grid-cols-3">
-						<Tableau title="Wear Vintage" description="Online shop for vintage fashion" />
-						<Tableau title="Wear Vintage" description="Online shop for vintage fashion" />
-						<Tableau title="Wear Vintage" description="Online shop for vintage fashion" />
+					<div className="w-max grid grid-flow-col auto-cols-max">
+						{displayWorks.map((work) => {
+							const { slug, title } = work
+							return <Tableau key={slug} title={title} slug={slug} />
+						})}
 					</div>
 				</section>
 
