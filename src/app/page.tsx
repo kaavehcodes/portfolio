@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { posts } from "#site/content"
-import { sortPosts } from "@/lib/utils"
+import { sortItems } from "@/lib/utils"
 import { SKILLS } from "@/lib/data-skills"
 
 import Logo from "@/components/Logo"
@@ -22,7 +22,7 @@ import HorizontalScroll from "@/components/HorizontalScroll"
 import IconArrowRight from "@/components/icons/IconArrowRight"
 
 export default function Home() {
-	const sortedPosts = sortPosts(posts.filter((post) => post.published))
+	const sortedPosts = sortItems(posts.filter((post) => post.published))
 	const displayPosts = sortedPosts
 
 	return (

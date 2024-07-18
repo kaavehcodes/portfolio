@@ -1,11 +1,12 @@
 import { works } from "#site/content"
-import { cn, sortPosts } from "@/lib/utils"
+import { sortItems } from "@/lib/utils"
 
 import Header from "@/components/Header"
 import FilterItems from "@/components/FilterItems"
+import { Suspense } from "react"
 
-export default async function Works({ searchParams }: { searchParams: { id: string | undefined } }) {
-  const sortedWorks = sortPosts(works.filter((work) => work.published))
+export default async function Works() {
+  const sortedWorks = sortItems(works.filter((work) => work.published))
   const displayWorks = sortedWorks
 
   return (
@@ -16,7 +17,9 @@ export default async function Works({ searchParams }: { searchParams: { id: stri
           <h1 className="fixed top-0 left-0 text-10xl font-light uppercase text-timberwolf origin-bottom-left rotate-90 -mt-16">Works</h1>
         </div>
         <div className="relative w-max col-span-10">
-          <FilterItems items={works} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <FilterItems items={displayWorks} />
+          </Suspense>
         </div>
       </section>
     </main>

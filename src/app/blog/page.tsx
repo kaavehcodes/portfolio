@@ -1,5 +1,5 @@
 import { posts } from "#site/content"
-import { sortPosts } from "@/lib/utils"
+import { sortItems } from "@/lib/utils"
 import { Metadata } from "next"
 
 import Header from "@/components/Header"
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Blog() {
-	const sortedPosts = sortPosts(posts.filter((post) => post.published))
+	const sortedPosts = sortItems(posts.filter((post) => post.published))
 	const displayPosts = sortedPosts
 
 	return (
