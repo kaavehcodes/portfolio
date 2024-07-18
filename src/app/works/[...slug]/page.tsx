@@ -2,6 +2,8 @@ import { notFound } from "next/navigation"
 import { works } from "#site/content"
 import { MDXContent } from "@/components/mdx-components"
 
+import Header from "@/components/Header"
+
 interface WorkPageProps {
   params: {
     slug: Array<string>
@@ -20,16 +22,26 @@ export async function generateStaticParams(): Promise<Array<WorkPageProps["param
 }
 
 export default async function Post({ params }: WorkPageProps) {
-  const post = await getPostFromParams(params)
+  const work = await getPostFromParams(params)
 
-  if (!post || !post.published) {
+  if (!work || !work.published) {
     notFound()
   }
 
   return (
-    <article className="">
-      <h1>{post.title}</h1>
-      <MDXContent code={post.body} />
-    </article>
+    <main>
+      <Header page="works" />
+      <section className="p-8">
+        <article className="">
+          <div className="mb-8">
+            <h1 className="text-6xl font-medium mb-8">{work.title}</h1>
+            <p className="text-2xl font-light">{work.description}</p>
+          </div>
+          <div className="">
+            <MDXContent code={work.body} />
+          </div>
+        </article>
+      </section>
+    </main>
   )
 }
