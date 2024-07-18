@@ -11,9 +11,9 @@ export default async function Works({ searchParams }: { searchParams: { id: stri
   return (
     <main className="overflow-x-hidden">
       <Header page="works" />
-      <section className="relative grid grid-cols-12">
+      <section className="relative grid grid-cols-12 py-8">
         <div className="relative col-span-2">
-          <h1 className="absolute top-0 left-0 text-8xl font-medium uppercase text-timberwolf origin-bottom-left rotate-90">Works</h1>
+          <h1 className="fixed top-0 left-0 text-10xl font-light uppercase text-timberwolf origin-bottom-left rotate-90 -mt-16">Works</h1>
         </div>
         <div className="relative w-max col-span-10">
           <FilterItems items={works} />
