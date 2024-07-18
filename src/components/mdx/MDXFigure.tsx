@@ -14,10 +14,10 @@ interface FigureProps {
 
 const MDXFigure = ({ children, variant, imgFull, imgLeft, imgRight }: FigureProps) => {
   return (
-    <div className={cn("grid grid-cols-1", {
+    <div className={cn("grid grid-cols-1 mb-8", {
       "grid-cols-2 gap-8": variant === "square"
     })}>
-      <figure className={cn("hidden w-max", {
+      <figure className={cn("hidden w-full", {
         "block": variant === "full"
       })}>
         <Image src={imgFull} width={1080} height={1080} className="w-full" alt="" />
