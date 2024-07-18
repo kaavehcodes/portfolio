@@ -3,6 +3,7 @@ import { works } from "#site/content"
 import { MDXContent } from "@/components/mdx-components"
 
 import Header from "@/components/Header"
+import NextItem from "@/components/NextItem"
 
 interface WorkPageProps {
   params: {
@@ -42,6 +43,9 @@ export default async function Post({ params }: WorkPageProps) {
           </div>
         </article>
       </section>
+      <footer className="sticky bottom-0">
+        <NextItem />
+      </footer>
     </main>
   )
 }
