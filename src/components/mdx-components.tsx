@@ -1,6 +1,7 @@
 import * as runtime from "react/jsx-runtime"
-import Image from "next/image"
-import Figure from "./Figure";
+
+import MDXHeader from "./mdx/MDXHeader";
+import MDXFigure from "./mdx/MDXFigure";
 
 interface MdxProps {
   code: string;
@@ -12,8 +13,8 @@ const useMDXComponent = (code: string) => {
 }
 
 const components = {
-  Image,
-  Figure,
+  MDXHeader,
+  MDXFigure,
 }
 
 export function MDXContent({ code }: MdxProps) {

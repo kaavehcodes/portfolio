@@ -1,4 +1,6 @@
+import Image from "next/image"
 import { notFound } from "next/navigation"
+
 import { works } from "#site/content"
 import { MDXContent } from "@/components/mdx-components"
 
@@ -32,12 +34,25 @@ export default async function Post({ params }: WorkPageProps) {
   return (
     <main>
       <Header page="works" />
-      <section className="p-16">
-        <article className="">
-          <div className="mb-8">
+      <section className="p-4">
+        <figure className="relative mb-8">
+          <div className="absolute top-0 left-0">
             <h1 className="text-6xl font-medium mb-4">{work.title}</h1>
             <p className="text-2xl font-light">{work.description}</p>
           </div>
+          <div className="absolute bottom-0 inset-x-0">
+            <ul className="flex flex-row items-center justify-between">
+              <li className="border-r border-black px-8">
+                Role
+              </li>
+              <li className="">
+                Year
+              </li>
+            </ul>
+          </div>
+          <Image src={work.image} width={1920} height={1080} alt="" />
+        </figure>
+        <article className="p-16">
           <div className="">
             <MDXContent code={work.body} />
           </div>
