@@ -32,10 +32,10 @@ export default async function Post({ params }: WorkPageProps) {
   return (
     <main>
       <Header page="works" />
-      <section className="p-8">
+      <section className="p-16">
         <article className="">
           <div className="mb-8">
-            <h1 className="text-6xl font-medium mb-8">{work.title}</h1>
+            <h1 className="text-6xl font-medium mb-4">{work.title}</h1>
             <p className="text-2xl font-light">{work.description}</p>
           </div>
           <div className="">
@@ -43,7 +43,7 @@ export default async function Post({ params }: WorkPageProps) {
           </div>
         </article>
       </section>
-      <footer className="sticky bottom-0">
+      <footer className="">
         <NextItem />
       </footer>
     </main>

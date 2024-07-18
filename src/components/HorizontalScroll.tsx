@@ -14,8 +14,7 @@ const HorizontalScroll = ({
         target: targetRef
     })
 
-    const scrollX = useTransform(scrollYProgress, [0, 1], ["0%", "-480%"])
-
+    const scrollX = useTransform(scrollYProgress, [0, 1], ["0%", "-510%"])
 
     return (
         <section ref={targetRef} className="relative h-[800vh]">
