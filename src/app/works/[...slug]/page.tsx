@@ -24,9 +24,13 @@ async function getItemFromParams(params: WorkPageProps["params"]) {
 async function getNextItem(params: WorkPageProps["params"]) {
   const slug = params.slug.join("/")
   const workIndex = works.findIndex((work) => work.slugAsParams === slug)
-  const nextItem = works[workIndex + 1]
 
-  return nextItem
+  if (workIndex < works.length - 1) {
+    const nextItem = works[workIndex + 1]
+    return nextItem
+  } else {
+    return works[0]
+  }
 }
 
 export async function generateStaticParams(): Promise<Array<WorkPageProps["params"]>> {
@@ -57,11 +61,6 @@ export default async function Post({ params }: WorkPageProps) {
                   <Tag key={index} label={tag} />
                 ))}
               </li>
-              <li>
-                <p>
-
-                </p>
-              </li>
               <li className="">
                 <p className="text-2xl font-light">2023</p>
               </li>
@@ -76,7 +75,7 @@ export default async function Post({ params }: WorkPageProps) {
         </article>
       </section>
       <footer className="">
-        <NextItem title={nextProject.title} description={nextProject.description} image={nextProject.image} />
+        <NextItem slug={nextProject.slugAsParams} title={nextProject.title} description={nextProject.description} image={nextProject.image} />
       </footer>
     </main>
   )
