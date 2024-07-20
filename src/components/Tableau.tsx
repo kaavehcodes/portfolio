@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import IconArrowRight from "./icons/IconArrowRight";
 
-const Tableau = ({ title, description, slug }: { title: string; description?: string; slug: string }) => {
+const Tableau = ({ title, description, slug, image }: { title: string; description?: string; slug: string; image: string }) => {
 	return (
 		<div className="w-max m-8">
 			<Link href={`/${slug}`}>
 				<figure>
-					<Image src="/images/works_wv-tableau-preview.png" width={500} height={500} alt="" />
+					<Image src={`/images/works/${image}_cover.png`} width={500} height={500} alt="" />
 				</figure>
 				<div className="grid grid-cols-3 gap-0">
 					<div className="col-span-2 py-4">

@@ -49,8 +49,8 @@ export default function Home() {
 					</div>
 					<div className="w-max grid grid-flow-col auto-cols-max">
 						{displayWorks.map((work) => {
-							const { slug, title } = work
-							return <Tableau key={slug} title={title} slug={slug} />
+							const { slug, slugAsParams, title } = work
+							return <Tableau key={slug} title={title} slug={slug} image={slugAsParams} />
 						})}
 					</div>
 				</section>
