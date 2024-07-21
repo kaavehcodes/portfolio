@@ -30,7 +30,7 @@ const works = defineCollection({
 		slug: s.path(),
 		title: s.string().max(99),
 		description: s.string().max(999).optional(),
-		image: s.string(),
+		// image: s.string(),
 		// image: s.image(),
 		date: s.isodate(),
 		category: s.string(),

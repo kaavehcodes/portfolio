@@ -8,7 +8,7 @@ import Logo from "./Logo"
 
 const Header = ({ page }: { page: string }) => {
   return (
-    <header className="p-4">
+    <header className="p-8">
       <nav className="flex flex-row items-center justify-between">
         <Link href="/" className="flex flex-row items-center">
           <Logo width={166} height={48} />

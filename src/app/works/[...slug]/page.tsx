@@ -48,7 +48,7 @@ export default async function Post({ params }: WorkPageProps) {
   return (
     <main className="overflow-x-hidden">
       <Header page="works" />
-      <section className="p-4">
+      <section className="p-8">
         <figure className="relative mb-8">
           <div className="absolute bottom-0 inset-x-0 bg-white p-8">
             <div className="mb-16">
@@ -66,7 +66,7 @@ export default async function Post({ params }: WorkPageProps) {
               </li>
             </ul>
           </div>
-          <Image src={work.image} width={1920} height={1080} alt="" />
+          <Image src={`/images/works/${work.slugAsParams}_header.png`} width={1920} height={1080} alt="" />
         </figure>
         <article className="p-16">
           <div className="">
@@ -75,7 +75,7 @@ export default async function Post({ params }: WorkPageProps) {
         </article>
       </section>
       <footer className="">
-        <NextItem slug={nextProject.slugAsParams} title={nextProject.title} description={nextProject.description} image={nextProject.image} />
+        <NextItem slug={nextProject.slugAsParams} title={nextProject.title} description={nextProject.description} image={`/images/works/${nextProject.slugAsParams}_header.png`} />
       </footer>
     </main>
   )
