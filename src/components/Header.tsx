@@ -5,7 +5,6 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 import Logo from "./Logo"
 
-
 const Header = ({ page }: { page: string }) => {
   return (
     <header className="p-8">

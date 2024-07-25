@@ -14,10 +14,6 @@ import SkillTag from "@/components/SkillTag"
 
 import FormContact from "@/components/FormContact"
 import BlogPost from "@/components/BlogPost"
-import IconDribbble from "@/components/icons/IconDribbble"
-import IconGithub from "@/components/icons/IconGithub"
-import IconLinkedin from "@/components/icons/IconLinkedin"
-import IconTwitter from "@/components/icons/IconTwitter"
 import HorizontalScroll from "@/components/HorizontalScroll"
 import IconArrowRight from "@/components/icons/IconArrowRight"
 
@@ -34,17 +30,22 @@ export default function Home() {
 			<HorizontalScroll>
 
 				<section className="flex justify-center">
-					<div className="min-h-screen w-screen flex flex-col items-center justify-center">
-						<div>
+					<div className="min-h-screen lg:w-screen flex flex-col items-center justify-center">
+						<div className="block lg:hidden px-4">
+							{/* <Navbar /> */}
+							<LogoType width={500} height={144} letters={false} />
+							{/* <MainMenu /> */}
+						</div>
+						<div className="hidden lg:block">
 							<Navbar />
-							<LogoType />
+							<LogoType width={846} height={144} letters={true} />
 							<MainMenu />
 						</div>
 					</div>
 				</section>
 
 				<section className="flex items-center">
-					<div className="py-8">
+					<div className="hidden lg:block py-8">
 						<h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">WORKS</h2>
 					</div>
 					<div className="w-max grid grid-flow-col auto-cols-max">
