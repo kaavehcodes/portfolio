@@ -50,7 +50,7 @@ const LogoType = ({ width, height, letters }: { width: number; height: number; l
 	return (
 		<>
 			<svg ref={anchorRef} width={width} height={height} className={cn("block", { "hidden": letters === false })} viewBox="0 0 846 144" fill="none">
-				<g id="letter-k" className={cn("block", { "hidden": letters === false })}>
+				<g id="letter-k">
 					<rect width="24" height="144" fill="black" />
 					<path d="M56 0H80L49 72L80 144H56L25 72L56 0Z" fill="black" />
 				</g>
@@ -69,12 +69,12 @@ const LogoType = ({ width, height, letters }: { width: number; height: number; l
 				<rect className={styles.eyelidRight} x="433" y="52" width="80" height="80" fill="white" />
 				<path id="glasses" d="M88 20C88 8.9543 96.9543 0 108 0H298C309.046 0 318 8.95431 318 20V40H358V20C358 8.95431 366.954 0 378 0H568C579.046 0 588 8.95431 588 20V28H564V25C564 22.2386 561.761 20 559 20H387C384.239 20 382 22.2386 382 25V40V60V119C382 121.761 384.239 124 387 124H559C561.761 124 564 121.761 564 119V65C564 62.2386 561.761 60 559 60H382V40H568C579.046 40 588 48.9543 588 60V124C588 135.046 579.046 144 568 144H378C366.954 144 358 135.046 358 124V60H318V124C318 135.046 309.046 144 298 144H108C96.9543 144 88 135.046 88 124V60C88 48.9543 96.9543 40 108 40H294V60H117C114.239 60 112 62.2386 112 65V119C112 121.761 114.239 124 117 124H289C291.761 124 294 121.761 294 119V60V40V25C294 22.2386 291.761 20 289 20H117C114.239 20 112 22.2386 112 25V28H88V20Z" fill="black" />
 			</svg>
-			<svg ref={anchorRef} width={width} height={height} className={cn("hidden", { "block w-full": letters === false })} viewBox="0 0 500 144" fill="none">
-				<g id="left-eye" ref={leftEyeRef}>
+			<svg width={width} height={height} className={cn("hidden", { "block w-full": letters === false })} viewBox="0 0 500 144" fill="none">
+				<g id="left-eye">
 					<circle cx="115" cy="92" r="40" fill="none" />
 					<circle cx="99" cy="92" r="20" fill="black" />
 				</g>
-				<g id="right-eye" ref={rightEyeRef}>
+				<g id="right-eye">
 					<circle cx="385" cy="92" r="40" fill="none" />
 					<circle cx="369" cy="92" r="20" fill="black" />
 				</g>
