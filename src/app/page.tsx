@@ -35,7 +35,7 @@ export default function Home() {
 						<div className="block lg:hidden tracking-widest px-4">
 							<Navbar />
 							<Logo width={500} height={144} />
-							{/* <MainMenu /> */}
+							<MainMenu />
 						</div>
 						{/* Desktop */}
 						<div className="hidden lg:block">
@@ -59,7 +59,7 @@ export default function Home() {
 				</section>
 
 				<section className="lg:flex lg:items-center py-16 lg:px-32">
-					<div className="py-4 lg:py-8">
+					<div id="about_section" className="py-4 lg:py-8">
 						<h2 className="text-8xl text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">ABOUT</h2>
 					</div>
 					<div className="lg:w-max lg:px-16 lg:mr-32">
@@ -108,7 +108,7 @@ export default function Home() {
 				</section>
 
 				<section className="lg:flex lg:items-center py-16 lg:px-32">
-					<div className="py-4 lg:py-8">
+					<div id="contact_section" className="py-4 lg:py-8">
 						<h2 className="text-8xl text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">CONTACT</h2>
 					</div>
 					<div className="flex flex-col items-center">
