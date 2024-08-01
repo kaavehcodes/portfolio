@@ -24,10 +24,8 @@ const HorizontalScroll = ({
 					{children}
 				</motion.div>
 			</section>
-			<section className="relative block lg:hidden">
-				<div>
-					{children}
-				</div>
+			<section className="relative block lg:hidden overflow-x-hidden">
+				{children}
 			</section>
 		</>
 	)

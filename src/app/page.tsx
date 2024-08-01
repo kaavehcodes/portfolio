@@ -30,12 +30,14 @@ export default function Home() {
 			<HorizontalScroll>
 
 				<section className="flex justify-center">
-					<div className="min-h-screen lg:w-screen flex flex-col items-center justify-center">
-						<div className="block lg:hidden px-4">
-							{/* <Navbar /> */}
-							<LogoType width={500} height={144} letters={false} />
+					<div className="min-h-screen lg:w-screen flex flex-col items-center lg:justify-center">
+						{/* Mobile */}
+						<div className="block lg:hidden tracking-widest px-4">
+							<Navbar />
+							<Logo width={500} height={144} />
 							{/* <MainMenu /> */}
 						</div>
+						{/* Desktop */}
 						<div className="hidden lg:block">
 							<Navbar />
 							<LogoType width={846} height={144} letters={true} />
@@ -44,11 +46,11 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="flex items-center">
-					<div className="hidden lg:block py-8">
-						<h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">WORKS</h2>
+				<section className="lg:flex lg:items-center">
+					<div className="py-4 lg:py-8">
+						<h2 className="text-8xl lg:text-10xl font-light uppercase text-timberwolf origin-center lg:rotate-90">WORKS</h2>
 					</div>
-					<div className="w-max grid grid-flow-col auto-cols-max">
+					<div className="lg:w-max grid grid-flow-row auto-rows-max lg:grid-flow-col lg:auto-cols-max">
 						{displayWorks.map((work) => {
 							const { slug, slugAsParams, title } = work
 							return <Tableau key={slug} title={title} slug={slug} image={slugAsParams} />
@@ -56,11 +58,11 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="flex items-center px-32">
-					<div className="py-8">
-						<h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">ABOUT</h2>
+				<section className="lg:flex lg:items-center py-16 lg:px-32">
+					<div className="py-4 lg:py-8">
+						<h2 className="text-8xl text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">ABOUT</h2>
 					</div>
-					<div className="w-max px-16 mr-32">
+					<div className="lg:w-max lg:px-16 lg:mr-32">
 						<p className="text-4xl font-light mb-8">Hey,</p>
 						<p className="text-xl font-light mb-4">
 							I am Kaaveh, a product designer who also knows how to make video games.
@@ -72,7 +74,7 @@ export default function Home() {
 							and augmented reality to make learning tailored, effective, and fun.
 						</p>
 					</div>
-					<div className="flex flex-col px-16">
+					<div className="flex flex-col lg:px-16">
 						<div className="mb-8">
 							<h3 className="text-3xl font-light mb-4">My Toolbox</h3>
 							<div className="w-128 flex flex-wrap">
@@ -105,9 +107,9 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="flex items-center px-32">
-					<div className="py-8">
-						<h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">CONTACT</h2>
+				<section className="lg:flex lg:items-center py-16 lg:px-32">
+					<div className="py-4 lg:py-8">
+						<h2 className="text-8xl text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">CONTACT</h2>
 					</div>
 					<div className="flex flex-col items-center">
 						<p className="text-4xl font-thin mb-8">Send me a message</p>
@@ -115,9 +117,9 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="flex items-center px-32">
-					<div className="py-8">
-						<h2 className="text-10xl font-light uppercase text-timberwolf origin-center rotate-90">BLOG</h2>
+				<section className="lg:flex lg:items-center py-16 lg:px-32">
+					<div className="py-4 lg:py-8">
+						<h2 className="text-8xl lg:text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">BLOG</h2>
 					</div>
 					<div className="flex flex-col">
 						<div className="w-max">
