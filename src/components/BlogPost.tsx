@@ -13,10 +13,10 @@ interface BlogPostProps {
 const BlogPost = ({ slug, title, description, date }: BlogPostProps) => {
 	return (
 		<Link href={"/" + slug}>
-			<article className="w-160 border px-8 py-4 mb-8">
+			<article className="w-full lg:w-160 border px-8 py-4 mb-8">
 				<p className="text-base font-light mb-2">user experience</p>
-				<h3 className="text-4xl font-medium mb-2">{title}</h3>
-				<p className="text-xl font-light mb-4">{description}</p>
+				<h3 className="text-2xl lg:text-4xl font-medium mb-2">{title}</h3>
+				<p className="text-lg lg:text-xl font-light mb-4">{description}</p>
 				<time dateTime={date} className="text-lg font-light text-timberwolf">{formatDate(date)}</time>
 			</article>
 		</Link>

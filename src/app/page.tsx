@@ -48,9 +48,9 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="flex flex-col items-center lg:flex-row lg:items-center">
+				<section className="flex flex-col items-center lg:flex-row lg:items-center mb-16">
 					<div className="py-4 lg:py-8">
-						<h2 className="text-center text-7xl lg:text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">WORKS</h2>
+						<h2 className="text-center text-8xl lg:text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">WORKS</h2>
 					</div>
 					<div className="w-max grid grid-rows-4 gap-0 lg:w-max lg:grid-cols-4 lg:gap-8">
 						{displayWorks.map((work) => {
@@ -60,11 +60,11 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="lg:flex lg:items-center py-16 lg:px-32">
-					<div id="about_section" className="py-4 lg:py-8">
-						<h2 className="text-8xl text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">ABOUT</h2>
+				<section className="lg:flex lg:items-center px-4 lg:px-32 mb-16 lg:mb-0">
+					<div id="about_section" className="mb-8 lg:mb-16">
+						<h2 className="text-center text-8xl text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">ABOUT</h2>
 					</div>
-					<div className="lg:w-max lg:px-16 lg:mr-32">
+					<div className="lg:w-max lg:px-16 mb-8 lg:mb-0 lg:mr-32">
 						<p className="text-4xl font-light mb-8">Hey,</p>
 						<p className="text-xl font-light mb-4">
 							I am Kaaveh, a product designer who also knows how to make video games.
@@ -79,12 +79,12 @@ export default function Home() {
 					<div className="flex flex-col lg:px-16">
 						<div className="mb-8">
 							<h3 className="text-3xl font-light mb-4">My Toolbox</h3>
-							<div className="w-128 flex flex-wrap">
+							<div className="w-full lg:w-128 flex flex-wrap">
 								{SKILLS.map((skill, id) => (
 									skill.type === "hard-skill" ? <SkillTag key={id} variant="default" text={skill.title} /> : null
 								))}
 							</div>
-							<div className="w-128 flex flex-wrap">
+							<div className="w-full lg:w-128 flex flex-wrap">
 								{SKILLS.map((skill, id) => (
 									skill.type === "soft-skill" ? <SkillTag key={id} variant="black" text={skill.title} /> : null
 								))}
@@ -92,7 +92,7 @@ export default function Home() {
 						</div>
 						<div className="mb-8">
 							<h4 className="text-3xl font-light mb-4">Design</h4>
-							<div className="w-128 flex flex-wrap">
+							<div className="w-full lg:w-128 flex flex-wrap">
 								{SKILLS.map((skill, id) => (
 									skill.type === "design" ? <SkillTag key={id} variant="icon" image={skill.image} text={skill.title} /> : null
 								))}
@@ -100,7 +100,7 @@ export default function Home() {
 						</div>
 						<div className="mb-8">
 							<h4 className="text-3xl font-light mb-4">Development</h4>
-							<div className="w-128 flex flex-wrap">
+							<div className="w-full lg:w-128 flex flex-wrap">
 								{SKILLS.map((skill, id) => (
 									skill.type === "develop" ? <SkillTag key={id} variant="icon" image={skill.image} text={skill.title} /> : null
 								))}
@@ -109,22 +109,22 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="lg:flex lg:items-center py-16 lg:px-32">
+				<section className="lg:flex lg:items-center lg:px-32 mb-16 lg:mb-0">
 					<div id="contact_section" className="py-4 lg:py-8">
-						<h2 className="text-8xl text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">CONTACT</h2>
+						<h2 className="text-center text-7xl lg:text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">CONTACT</h2>
 					</div>
 					<div className="flex flex-col items-center">
-						<p className="text-4xl font-thin mb-8">Send me a message</p>
+						<p className="text-3xl lg:text-4xl font-thin mb-8">Send me a message</p>
 						<FormContact />
 					</div>
 				</section>
 
-				<section className="lg:flex lg:items-center py-16 lg:px-32">
+				<section className="lg:flex lg:items-center mb-16 lg:mb-0 lg:px-32">
 					<div className="py-4 lg:py-8">
-						<h2 className="text-8xl lg:text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">BLOG</h2>
+						<h2 className="text-center text-8xl lg:text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">BLOG</h2>
 					</div>
 					<div className="flex flex-col">
-						<div className="w-max">
+						<div className="w-full lg:w-max px-2">
 							{displayPosts?.length > 0 ? (
 								<ul className="flex flex-col">
 									{displayPosts.map((post) => {
@@ -138,7 +138,7 @@ export default function Home() {
 								<p>No blog posts yet</p>
 							)}
 						</div>
-						<div>
+						<div className="p-4">
 							<Link href="/blog" className="flex flex-row">
 								<p className="text-xl font-light uppercase mr-2">Go to blog</p>
 								<IconArrowRight width={24} height={24} />
