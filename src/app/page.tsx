@@ -32,7 +32,7 @@ export default function Home() {
 				<section className="flex justify-center mb-16 lg:mb-0">
 					<div className="lg:min-h-screen lg:w-screen flex flex-col items-center lg:justify-center">
 						{/* Mobile */}
-						<div className="block lg:hidden tracking-widest px-4">
+						<div className="block lg:hidden px-4">
 							<Navbar />
 							<div className="py-8">
 								<Logo width={500} height={144} />
@@ -48,11 +48,12 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="flex flex-col items-center lg:flex-row lg:items-center mb-16">
+				<section className="flex flex-col items-center lg:flex-row lg:items-center mb-16 lg:mb-0">
 					<div className="py-4 lg:py-8">
 						<h2 className="text-center text-8xl lg:text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">WORKS</h2>
 					</div>
-					<div className="w-max grid grid-rows-4 gap-0 lg:w-max lg:grid-cols-4 lg:gap-8">
+					{/* <div className="w-max grid grid-rows-4 gap-0 lg:w-max lg:grid-cols-4 lg:gap-8"> */}
+					<div className="lg:w-max grid grid-flow-row auto-rows-max lg:grid-flow-col lg:auto-cols-max">
 						{displayWorks.map((work) => {
 							const { slug, slugAsParams, title } = work
 							return <Tableau key={slug} title={title} slug={slug} image={slugAsParams} />
