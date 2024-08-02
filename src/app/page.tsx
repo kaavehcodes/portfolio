@@ -29,12 +29,14 @@ export default function Home() {
 
 			<HorizontalScroll>
 
-				<section className="flex justify-center">
-					<div className="min-h-screen lg:w-screen flex flex-col items-center lg:justify-center">
+				<section className="flex justify-center mb-16 lg:mb-0">
+					<div className="lg:min-h-screen lg:w-screen flex flex-col items-center lg:justify-center">
 						{/* Mobile */}
 						<div className="block lg:hidden tracking-widest px-4">
 							<Navbar />
-							<Logo width={500} height={144} />
+							<div className="py-8">
+								<Logo width={500} height={144} />
+							</div>
 							<MainMenu />
 						</div>
 						{/* Desktop */}
@@ -46,11 +48,11 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section className="lg:flex lg:items-center">
+				<section className="flex flex-col items-center lg:flex-row lg:items-center">
 					<div className="py-4 lg:py-8">
-						<h2 className="text-8xl lg:text-10xl font-light uppercase text-timberwolf origin-center lg:rotate-90">WORKS</h2>
+						<h2 className="text-center text-7xl lg:text-10xl font-light uppercase text-timberwolf lg:origin-center lg:rotate-90">WORKS</h2>
 					</div>
-					<div className="lg:w-max grid grid-flow-row auto-rows-max lg:grid-flow-col lg:auto-cols-max">
+					<div className="w-max grid grid-rows-4 gap-0 lg:w-max lg:grid-cols-4 lg:gap-8">
 						{displayWorks.map((work) => {
 							const { slug, slugAsParams, title } = work
 							return <Tableau key={slug} title={title} slug={slug} image={slugAsParams} />
