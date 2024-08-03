@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils"
 interface MDXHeader {
   title: string;
   imgSrc: string;
-
 }
 
 const MDXHeader = ({ title, imgSrc }: MDXHeader) => {

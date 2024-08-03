@@ -49,25 +49,25 @@ export default async function Post({ params }: WorkPageProps) {
     <main className="overflow-x-hidden">
       <Header page="works" />
       <section className="p-8">
-        <figure className="relative mb-8">
-          <div className="absolute bottom-0 inset-x-0 bg-white p-8">
-            <div className="mb-16">
-              <h1 className="text-6xl font-medium mb-4">{work.title}</h1>
-              <p className="text-2xl font-light">{work.description}</p>
-            </div>
-            <ul className="flex flex-row items-center justify-between">
-              <li className="">
-                {work.tags?.map((tag, index) => (
-                  <Tag key={index} label={tag} />
-                ))}
-              </li>
-              <li className="">
-                <p className="text-2xl font-light">2023</p>
-              </li>
-            </ul>
-          </div>
+        <figure className="relative">
           <Image src={`/images/works/${work.slugAsParams}_header.png`} width={1920} height={1080} alt="" />
         </figure>
+        <div className="bg-white p-8">
+          <div className="mb-16">
+            <h1 className="text-6xl font-medium mb-4">{work.title}</h1>
+            <p className="text-2xl font-light">{work.description}</p>
+          </div>
+          <ul className="flex flex-row items-center justify-between">
+            <li className="">
+              {work.tags?.map((tag, index) => (
+                <Tag key={index} label={tag} />
+              ))}
+            </li>
+            <li className="">
+              <p className="text-2xl font-light">2023</p>
+            </li>
+          </ul>
+        </div>
         <article className="p-16">
           <div className="">
             <MDXContent code={work.body} />
