@@ -15,7 +15,7 @@ const HorizontalScroll = ({
 		target: targetRef
 	})
 
-	const scrollX = useTransform(scrollYProgress, [0, 1], ["0%", "-510%"])
+	const scrollX = useTransform(scrollYProgress, [0, 1], ["0%", "-530%"])
 
 	return (
 		<>

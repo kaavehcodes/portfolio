@@ -12,8 +12,8 @@ const Tableau = ({ title, description, slug, image }: { title: string; descripti
 					<Image src={`/images/works/${image}_cover.png`} width={500} height={500} className="w-full" alt="" />
 				</figure>
 				<div className="grid grid-cols-3 gap-0">
-					<div className="col-span-2 py-4">
-						<h3 className="text-2xl font-light uppercase">{title}</h3>
+					<div className="col-span-2 p-4">
+						<h3 className="text-2xl lg:text-3xl font-light uppercase">{title}</h3>
 						<p className="text-lg font-thin lowercase">{description}</p>
 					</div>
 					<div className="col-span-1 flex items-center justify-center">
