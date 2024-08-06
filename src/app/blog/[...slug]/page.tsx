@@ -64,8 +64,8 @@ export default async function Post({ params }: PostPageProps) {
 	}
 
 	return (
-		<article className="">
-			<h1>{post.title}</h1>
+		<article className="p-4 lg:p-16">
+			{/* <h1>{post.title}</h1> */}
 			<MDXContent code={post.body} />
 		</article>
 	)
